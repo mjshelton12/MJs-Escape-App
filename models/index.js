@@ -15,4 +15,4 @@ Interaction.belongsTo(Location, {
   foreignKey: 'location_id'
 });
 
-module.exports = { User, Project };
+module.exports = { Character, Interaction, Location };
