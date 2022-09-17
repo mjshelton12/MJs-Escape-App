@@ -26,10 +26,10 @@ Interaction.init(
     resolution_id: {
         type: DataTypes.INTEGER,
         allowNull: true,
-        references: {
-            model: 'resolution',
-            key: 'id',
-          },
+        // references: {
+        //     model: 'resolution',
+        //     key: 'id',
+        //   },
     }
   },
   {
