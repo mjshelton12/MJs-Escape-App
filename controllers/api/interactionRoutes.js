@@ -5,7 +5,7 @@ const { Interaction } = require('../../models');
 router.get('/', async (req, res) => {
     try {
       const interactionData = await Interaction.findAll({});
-      res.status(200).json(characterData);
+      res.status(200).json(interactionData);
     } catch (err) {
       res.status(500).json(err);
     }
