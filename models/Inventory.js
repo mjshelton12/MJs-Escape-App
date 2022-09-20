@@ -33,7 +33,7 @@ Inventory.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: "Inventory",
+        modelName: "inventory",
       }
 );
 
