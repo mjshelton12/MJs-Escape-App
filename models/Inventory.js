@@ -12,15 +12,15 @@ Inventory.init(
             autoIncrement: true,
         },
         item_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allownull: false,
             references: {
-                model: 'items',
+                model: 'item',
                 key: 'id',
             }
         },
         character_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allownull: false,
             references: {
                 model: 'character',

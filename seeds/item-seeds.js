@@ -1,4 +1,4 @@
-const { Items } = require('../models');
+const { Item } = require('../models');
 
 var itemsObjectList = [];
 var itemsList = ["Everything Bagel",
@@ -17,10 +17,10 @@ var itemsList = ["Everything Bagel",
 
 itemsList.forEach(function(entry) {
     var singleObj = {};
-    singleObj['item_name'] = entry;
-    listOfObjects.push(singleObj);
+    singleObj['item'] = entry;
+    itemsObjectList.push(singleObj);
 })
 
-const seedItems = () => Item.bulkCreate(itemData);
+const seedItems = () => Item.bulkCreate(itemsObjectList);
 
 module.exports = seedItems;
