@@ -11,14 +11,14 @@ Interaction.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    location_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        references: {
-            model: 'location',
-            key: 'id',
-          },
-    },
+    // location_id: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false,
+    //     references: {
+    //         model: 'location',
+    //         key: 'id',
+    //       },
+    // },
     interaction: {
         type: DataTypes.STRING,
         allowNull: false,
