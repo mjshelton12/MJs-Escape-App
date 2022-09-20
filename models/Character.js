@@ -27,14 +27,14 @@ Character.init(
         type: DataTypes.STRING,
         allowNull: true,
     },
-    location_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        references: {
-            model: 'location',
-            key: 'id',
-          },
-    },
+    // location_id: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false,
+    //     references: {
+    //         model: 'location',
+    //         key: 'id',
+    //       },
+    // },
   },
   {
     sequelize,

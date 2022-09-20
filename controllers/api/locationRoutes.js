@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Location } = require('../../models');
+const { Location, Interaction } = require('../../models');
 // const withAuth = require('../../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -13,9 +13,11 @@ router.get('/', async (req, res) => {
   
   router.get('/:id', async (req, res) => {
     try {
-      const locationData = await Location.findByPk(req.params.id)
+      const locationData = await Location.findOne({where: {id :req.params.id},
+        include: [Interaction]
+      });
   
-      if (!characterData) {
+      if (!locationData) {
         res.status(404).json({ message: 'No location found with that id' });
         return;
       }
