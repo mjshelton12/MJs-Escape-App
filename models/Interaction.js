@@ -23,14 +23,14 @@ Interaction.init(
         type: DataTypes.STRING,
         allowNull: false,
     },
-    resolution_id: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
+    // resolution_id: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: true,
         // references: {
         //     model: 'resolution',
         //     key: 'id',
         //   },
-    }
+    //}
   },
   {
     sequelize,

@@ -14,6 +14,10 @@ Resolution.init(
         resolution: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        interaction_id: {
+            type: DataTypes.INTEGER,
+            allownull: true
         }
     },
     {
