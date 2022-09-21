@@ -22,9 +22,13 @@ Interaction.belongsTo(Location, {
   through: 'location_id'
 });
 
-// Interaction.hasOne(Resolution, {
-//   foreignKey: 'resolution_id',
-// });
+Interaction.hasOne(Resolution, {
+  foreignKey: 'interaction_id',
+});
+
+Resolution.belongsTo(Interaction, {
+  foreignKey: 'interaction_id',
+});
 
 Character.hasMany(Inventory, {
   foreignKey: 'character_id',

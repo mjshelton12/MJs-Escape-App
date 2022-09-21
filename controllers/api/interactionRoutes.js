@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const { Interaction, Location } = require('../../models');
+const { Interaction, Location, Resolution } = require('../../models');
 // const withAuth = require('../../utils/auth');
 
 router.get('/', async (req, res) => {
     try {
-      const interactionData = await Interaction.findAll({include: [Location]});
+      const interactionData = await Interaction.findAll({include: [Location, Resolution]});
       res.status(200).json(interactionData);
     } catch (err) {
       res.status(500).json(err);
@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
   router.get('/:id', async (req, res) => {
     try {
     const interactionData = await Interaction.findOne({where: {id :req.params.id},
-       include: [Location]
+       include: [Location, Resolution]
     
       });
   

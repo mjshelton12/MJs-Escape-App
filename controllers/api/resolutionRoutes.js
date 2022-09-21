@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const resolutionData = await Resolution.findOne({where: {id :req.params.id},
-                                                     include: [Interaction]});
+      include: [Interaction]});
 
     if (!resolutionData) {
       res.status(404).json({ message: 'No resolution found with that id' });
