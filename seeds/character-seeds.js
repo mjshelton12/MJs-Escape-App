@@ -12,12 +12,6 @@ const characterData = [
     character_name: "posh",
     stats: "pretty",
     location_id: 2,
-  },
-  {
-    user_id: 2,
-    character_name: "malor",
-    stats: "evil",
-    location_id: 2,
   }
 ];
 
