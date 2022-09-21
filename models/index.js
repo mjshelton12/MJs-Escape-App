@@ -19,20 +19,26 @@ Location.hasMany(Interaction, {
 })
 
 Interaction.belongsTo(Location, {
-  foreignKey: 'location_id'
+  through: 'location_id'
 });
 
-Interaction.hasOne(Resolution, {
-  foreignKey: 'resolution_id',
-});
+// Interaction.hasOne(Resolution, {
+//   foreignKey: 'resolution_id',
+// });
 
-Inventory.belongsTo(Character, {
+Character.hasMany(Inventory, {
   foreignKey: 'character_id',
 });
 
-Inventory.hasMany(Item, {
-  foreignKey: 'item_id',
+Inventory.belongsTo(Item, {
+  foreignKey: 'item_id'
 });
+
+Item.belongsToMany(Inventory, {
+  through: "item_id"
+})
+
+
 
 module.exports = {Character, 
                   Interaction, 

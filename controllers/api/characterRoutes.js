@@ -4,7 +4,7 @@ const { Character, Location, Inventory } = require('../../models');
 
 router.get('/', async (req, res) => {
     try {
-      const characterData = await Character.findAll({include: [Location] });
+      const characterData = await Character.findAll({include: [Location,Inventory] });
       res.status(200).json(characterData);
     } catch (err) {
       res.status(500).json(err);
@@ -13,8 +13,8 @@ router.get('/', async (req, res) => {
   
   router.get('/:id/', async (req, res) => {
     try {
-      const characterData = await Character.findOne({where: {id :req.params.id}
-        // include: [Location, Inventory]
+      const characterData = await Character.findOne({where: {id :req.params.id},
+        include: [Location, Inventory]
       });
   
       if (!characterData) {
