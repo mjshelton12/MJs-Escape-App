@@ -22,10 +22,10 @@ Inventory.init(
         character_id: {
             type: DataTypes.INTEGER,
             allownull: false,
-            references: {
-                model: 'character',
-                key: 'id',
-            }
+            // references: {
+            //     model: 'character',
+            //     key: 'id',
+            // }
         }
     },
     {
