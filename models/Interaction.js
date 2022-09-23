@@ -15,13 +15,13 @@ Interaction.init(
         type: DataTypes.STRING,
         allowNull: false,
     },
-    location_patch: {
+    change: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: false
     },
-    item_post: {
-      type: DataTypes.INTEGER,
-      allowNull: true
+    change_destination: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   },
   {

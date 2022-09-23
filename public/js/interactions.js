@@ -6,13 +6,15 @@ const processInteraction = async (btnData) => {
 
     console.log(btnData.attributes)
     
-    const location = btnData.getAttribute('location_patch')
-    const itemPost = btnData.getAttribute('item_post')
+    const change = btnData.getAttribute('change')
+    const changeClass = btnData.getAttribute('class')
 
-    if (location) {
+    console.log("LOOK, A CLASS! " + change)
+
+    if (changeClass === "location") {
         const response = await fetch('/api/characters/1', {
             method: 'PATCH',
-            body: JSON.stringify({ "location_id" : location }),
+            body: JSON.stringify({ "location_id" : change }),
             headers: { 'Content-Type': 'application/json' },
           });
           console.log(response) 
@@ -23,10 +25,23 @@ const processInteraction = async (btnData) => {
           }
         }
     
-    if (itemPost) {
-
+    if (changeClass === "item") {
+      const response = await fetch('/api/inventories', {
+        method: 'POST',
+        body: JSON.stringify({ change }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+      console.log(response) 
+      if (response.ok) {
+        document.location.reload()
+      } else {
+        alert('Failed to pick up item.');
+      }
     }
 
+    else {
+      return;
+    }
 }
 
 // when you click a button, it takes you to a patch route that, based on the interaction attached to the button, changes the character's location
@@ -34,8 +49,12 @@ const processInteraction = async (btnData) => {
 
 interactionList.onclick = function(event) {
     let target = event.target;
+
+    console.log("Hi!")
   
-    if (target.className!= 'interactions-btn') return;
+    if (target.id!= 'interactions-btn') return;
+
+    console.log("Honor")
 
     processInteraction(target);
   };

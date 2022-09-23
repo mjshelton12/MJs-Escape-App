@@ -1,4 +1,4 @@
-const { Character, Location, Inventory, Interaction } = require('../models');
+const { Character, Location, Item, Interaction } = require('../models');
 
 const router = require('express').Router();
 
@@ -12,18 +12,14 @@ router.get('/Start', async (req, res) => {
             [{
                 model: Interaction
               }]
+        },
+        {
+          model: Item
         }
-        // {
-        //   model: Inventory
-        // }
       ]
     });
 
-    console.log("Line 22 " + JSON.stringify(initializeCharacter))
-
     const character = initializeCharacter.get({ plain: true });
-
-    console.log("Line 27 " + character)
     
         res.render('Start', {
             ...character,
@@ -34,7 +30,5 @@ router.get('/Start', async (req, res) => {
           res.status(500).json(err);
         }
       });
-
-//Post character in a location
 
 module.exports = router;

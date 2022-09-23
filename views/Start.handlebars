@@ -1,16 +1,20 @@
 <div class="row app-land">
-        {{!-- <h2>
-            Test content
-        </h2> --}}
+    <div>
         <p>Welcome, {{character_name}}. You are in the {{location.location_name}}. What would you like to do next?</p>
-       <ul class="interaction-list">
-        {{#each location.interactions as |interaction|}}
-        {{> interaction}}
-        {{/each}}  
-       </ul>
-       {{!-- <ul>
-        {{#each inventory. as |inventory-item|}}
-        {{> inventory-item}}
-        {{/each}}  
-       </ul> --}}
+    </div>
+    <div>
+        <ul class="interaction-list">
+            {{#each location.interactions as |interaction|}}
+            {{> interaction}}
+            {{/each}}
+        </ul>
+    </div>
+    <div>
+        <h4>Inventory:</h4>
+        <ul>
+            {{#each items as |item|}}
+            {{> item}}
+            {{/each}}
+        </ul>
+    </div>
 </div>

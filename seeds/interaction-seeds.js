@@ -4,38 +4,62 @@ const interactionData = [
   {
     location_id: 1,
     interaction: "Go to Kitchen",
-    location_patch: 2,
-    item_post: null
+    change: 2,
+    change_destination: "location"
   },
   {
     location_id: 1,
     interaction: "Go to Bathroom",
-    location_patch: 3,
-    item_post: null
+    change: 3,
+    change_destination: "location"
+  },
+  {
+    location_id: 1,
+    interaction: "Pick up Snazzy Jacket",
+    change: 13,
+    change_destination: "item"
+  },
+  {
+    location_id: 1,
+    interaction: "Try to Leave",
+    change: 0,
+    change_destination: "win?"
   },
   {
     location_id: 2,
     interaction: "Go to Bedroom",
-    location_patch: 1,
-    item_post: null
+    change: 1,
+    change_destination: "location"
   },
   {
     location_id: 2,
     interaction: "Go to Bathroom",
-    location_patch: 3,
-    item_post: null
+    change: 3,
+    change_destination: "location"
+  },
+  {
+    location_id: 2,
+    interaction: "Pick up Frog",
+    change: 6,
+    change_destination: "item"
   },
   {
     location_id: 3,
     interaction: "Go to Bedroom",
-    location_patch: 1,
-    item_post: null
+    change: 1,
+    change_destination: "location"
   },
   {
     location_id: 3,
     interaction: "Go to Kitchen",
-    location_patch: 2,
-    item_post: null
+    change: 2,
+    change_destination: "location"
+  },
+  {
+    location_id: 3,
+    interaction: "Pick up Rusted Key",
+    change: 2,
+    change_destination: "item"
   }
 ];
 
