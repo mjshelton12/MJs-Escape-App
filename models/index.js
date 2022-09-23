@@ -38,14 +38,6 @@ Item.belongsToMany(Character, {
   through: { model:"inventory" }
 });
 
-Item.belongsToMany(Inventory, {
-  through:{ model: "inventory" }
-});
-
-Inventory.belongsTo(Item, {
-  foreignKey: 'item_id'
-});
-
 module.exports = {Character, 
                   Interaction, 
                   Location, 
