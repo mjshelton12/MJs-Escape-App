@@ -4,7 +4,7 @@ const { Inventory, Item} = require('../../models');
 
 router.get('/', async (req, res) => {
     try {
-      const inventoryData = await Inventory.findAll({include: [Item] }); //
+      const inventoryData = await Inventory.findAll();
       res.status(200).json(inventoryData);
     } catch (err) {
       res.status(500).json(err);
@@ -13,9 +13,7 @@ router.get('/', async (req, res) => {
   
 router.get('/:id', async (req, res) => {
   try {
-    const inventoryData = await Inventory.findOne({where: {id :req.params.id},
-      include: [Item]
-    });
+    const inventoryData = await Inventory.findOne({where: {id :req.params.id}});
 
     if (!inventoryData) {
       res.status(404).json({ message: 'No inventory found with that id' });
@@ -27,9 +25,26 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// router.post('/', async (req, res) => {
+//   try {
+//     const inventoryData = await Inventory.create(req.body);
+//     res.status(200).json(inventoryData);
+//   } catch (err) {
+//     res.status(400).json(err);
+//   }
+// });
+
 router.post('/', async (req, res) => {
+
+  console.log("HOLY SNAKES BATMAN! " + JSON.stringify(req.body))
+
   try {
-    const inventoryData = await Inventory.create(req.body);
+    const inventoryData = await Inventory.create({
+      item_id: req.body.change,
+      character_id: 1
+
+    });
+    console.log(inventoryData)
     res.status(200).json(inventoryData);
   } catch (err) {
     res.status(400).json(err);
