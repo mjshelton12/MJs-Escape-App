@@ -1,5 +1,17 @@
 <div class="row app-land">
-        <h2>
+        {{!-- <h2>
             Test content
-        </h2>
+        </h2> --}}
+        <p>{{character_name}}</p>
+        <p>{{location.location_name}}</p>
+       <ul>
+        {{#each location.interactions as |interaction|}}
+        {{> interaction}}
+        {{/each}}  
+       </ul>
+       {{!-- <ul>
+        {{#each inventory. as |inventory-item|}}
+        {{> inventory-item}}
+        {{/each}}  
+       </ul> --}}
 </div>
