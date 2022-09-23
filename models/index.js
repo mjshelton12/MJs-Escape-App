@@ -19,7 +19,7 @@ Location.hasMany(Interaction, {
 })
 
 Interaction.belongsTo(Location, {
-  through: 'location_id'
+  through: 'location'
 });
 
 Interaction.hasOne(Resolution, {
@@ -30,16 +30,16 @@ Resolution.belongsTo(Interaction, {
   foreignKey: 'interaction_id',
 });
 
-Character.hasMany(Inventory, {
-  foreignKey: 'character_id',
+Character.belongsToMany(Item, {
+  through: 'inventory',
 });
 
-Inventory.belongsTo(Item, {
-  foreignKey: 'item_id'
-});
+// Inventory.belongsTo(Item, {
+//   foreignKey: 'item_id'
+// });
 
-Item.belongsToMany(Inventory, {
-  through: "item_id"
+Item.belongsToMany(Character, {
+  through: "inventory"
 })
 
 
