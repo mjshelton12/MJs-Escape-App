@@ -11,26 +11,18 @@ Interaction.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    // location_id: {
-    //     type: DataTypes.INTEGER,
-    //     allowNull: false,
-    //     references: {
-    //         model: 'location',
-    //         key: 'id',
-    //       },
-    // },
     interaction: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    // resolution_id: {
-    //     type: DataTypes.INTEGER,
-    //     allowNull: true,
-        // references: {
-        //     model: 'resolution',
-        //     key: 'id',
-        //   },
-    //}
+    location_patch: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    item_post: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    }
   },
   {
     sequelize,

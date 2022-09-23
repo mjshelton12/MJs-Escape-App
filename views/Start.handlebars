@@ -2,8 +2,7 @@
         {{!-- <h2>
             Test content
         </h2> --}}
-        <p>{{character_name}}</p>
-        <p>{{location.location_name}}</p>
+        <p>Welcome, {{character_name}}. You are in the {{location.location_name}}. What would you like to do next?</p>
        <ul>
         {{#each location.interactions as |interaction|}}
         {{> interaction}}
