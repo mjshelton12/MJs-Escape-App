@@ -17,7 +17,7 @@ const processInteraction = async (btnData) => {
           });
           console.log(response) 
           if (response.ok) {
-            // document.location.replace('/');
+            document.location.reload()
           } else {
             alert('Failed to change locations.');
           }
