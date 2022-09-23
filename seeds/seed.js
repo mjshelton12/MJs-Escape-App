@@ -15,23 +15,23 @@ const seedAll = async () => {
   await seedUser()
   console.log('\n----- USERS SEEDED -----\n')
 
-  // await seedItems()
-  // console.log('\n----- ITEMS SEEDED -----\n')
+  await seedItems()
+  console.log('\n----- ITEMS SEEDED -----\n')
 
-  // await seedLocations();
-  // console.log('\n----- LOCATIONS SEEDED -----\n');
+  await seedLocations();
+  console.log('\n----- LOCATIONS SEEDED -----\n');
 
-  // await seedCharacters();
-  // console.log('\n----- CHARACTERS SEEDED -----\n');
+  await seedCharacters();
+  console.log('\n----- CHARACTERS SEEDED -----\n');
 
-  // await seedInventory()
-  // console.log('\n----- INVENTORY SEEDED -----\n')
+  await seedInventory()
+  console.log('\n----- INVENTORY SEEDED -----\n')
 
-  // await seedInteractions();
-  // console.log('\n----- INTERACTIONS SEEDED -----\n');
+  await seedInteractions();
+  console.log('\n----- INTERACTIONS SEEDED -----\n');
 
-  // await seedResolution()
-  // console.log('\n----- RESOLUTIONS SEEDED -----\n')
+  await seedResolution()
+  console.log('\n----- RESOLUTIONS SEEDED -----\n')
 
   process.exit(0);
 };
