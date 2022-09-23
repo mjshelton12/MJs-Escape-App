@@ -27,35 +27,35 @@ router.get('/', async (req, res) => {
     }
   });
 
-  router.patch('/:id', async (req, res) => {
-    const characterData = await Character.findOne({where: {id :req.params.id}});
-    const change = req.body
-   
-    if (characterData) {
-      Object.assign(characterData, change)
-      const characterUpdate = await Character.update(characterData, {where: {id :req.params.id}})
-      res.status(200).json(characterUpdate)
-    } else {
-      res.status(404).json({message: 'Unable to update location'})
-    }
-   })
+router.patch('/:id', async (req, res) => {
+  const characterData = await Character.findOne({where: {id :req.params.id}});
+  const change = req.body
+  
+  if (characterData) {
+    // Character.assign(characterData, change)
+    const characterUpdate = await Character.update(change, {where: {id :req.params.id}})
+    res.status(200).json(characterUpdate)
+  } else {
+    res.status(404).json({message: 'Unable to update location'})
+  }
+  })
 
-   router.put('/:id', async (req, res) => {
-    // update a category by its `id` value
-    try {
-      const categoryData = await Character.update(req.body, {
-        where: {
-          id: req.params.id,
-        },
-      });
-      if (!categoryData[0]) {
-        res.status(404).json({ message: 'No category with this id!' });
-        return;
-      }
-      res.status(200).json(categoryData);
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
+  //  router.put('/:id', async (req, res) => {
+  //   // update a category by its `id` value
+  //   try {
+  //     const categoryData = await Character.update(req.body, {
+  //       where: {
+  //         id: req.params.id,
+  //       },
+  //     });
+  //     if (!categoryData[0]) {
+  //       res.status(404).json({ message: 'No category with this id!' });
+  //       return;
+  //     }
+  //     res.status(200).json(categoryData);
+  //   } catch (err) {
+  //     res.status(500).json(err);
+  //   }
+  // });
 
   module.exports = router;
