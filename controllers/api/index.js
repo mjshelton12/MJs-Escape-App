@@ -6,7 +6,7 @@ const itemRoutes = require('./itemRoutes')
 const resolutionRoutes = require('./resolutionRoutes')
 const userRoutes = require('./userRoutes')
 const inventoryRoutes = require('./inventoryRoutes')
-const userRoutes2 = require('./user-routes');
+// const userRoutes2 = require('./user-routes.js');
 
 router.use('/characters', characterRoutes);
 router.use('/interactions', interactionRoutes);
@@ -15,6 +15,6 @@ router.use('/items',itemRoutes)
 router.use('/resolutions',resolutionRoutes)
 router.use('/users',userRoutes)
 router.use('/inventories',inventoryRoutes)
-router.use('./user', userRoutes2)
+// router.use('/user', userRoutes2)
 
 module.exports = router;
