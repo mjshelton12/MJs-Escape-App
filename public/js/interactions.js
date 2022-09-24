@@ -1,60 +1,60 @@
-const interactionList = document.querySelector('.interaction-list')
-
-console.log(interactionList)
+const interactionList = document.querySelector(".interaction-list");
 
 const processInteraction = async (btnData) => {
 
-    console.log(btnData.attributes)
-    
-    const change = btnData.getAttribute('change')
-    const changeClass = btnData.getAttribute('class')
+  const change = btnData.getAttribute("change");
+  const changeClass = btnData.getAttribute("class");
 
-    console.log("LOOK, A CLASS! " + change)
-
-    if (changeClass === "location") {
-        const response = await fetch('/api/characters/1', {
-            method: 'PATCH',
-            body: JSON.stringify({ "location_id" : change }),
-            headers: { 'Content-Type': 'application/json' },
-          });
-          console.log(response) 
-          if (response.ok) {
-            document.location.reload()
-          } else {
-            alert('Failed to change locations.');
-          }
-        }
-    
-    if (changeClass === "item") {
-      const response = await fetch('/api/inventories', {
-        method: 'POST',
-        body: JSON.stringify({ change }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-      console.log(response) 
-      if (response.ok) {
-        document.location.reload()
-      } else {
-        alert('Failed to pick up item.');
-      }
+  if (changeClass === "location") {
+    const response = await fetch("/api/characters/1", {
+      method: "PATCH",
+      body: JSON.stringify({ location_id: change }),
+      headers: { "Content-Type": "application/json" },
+    });
+    console.log(response);
+    if (response.ok) {
+      document.location.reload();
+    } else {
+      alert("Failed to change locations.");
     }
+  }
 
-    else {
-      return;
+  if (changeClass === "item") {
+    const response = await fetch("/api/inventories", {
+      method: "POST",
+      body: JSON.stringify({ change }),
+      headers: { "Content-Type": "application/json" },
+    });
+    console.log(response);
+    if (response.ok) {
+      document.location.reload();
+    } else {
+      alert("Failed to pick up item.");
     }
-}
+  }
 
-// when you click a button, it takes you to a patch route that, based on the interaction attached to the button, changes the character's location
+  if (changeClass === "win?") {
+    const response = await fetch(`/api/inventories/:${change}`, {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+    });
+    console.log(response);
+    if (response.ok) {
+      document.location.replace("/end");
+    } else {
+      alert("Nice try, but you can't leave.");
+    }
+  } else {
+    return;
+  }
+};
 
-
-interactionList.onclick = function(event) {
+if (interactionList) {
+  interactionList.onclick = function (event) {
     let target = event.target;
 
-    console.log("Hi!")
-  
-    if (target.id!= 'interactions-btn') return;
-
-    console.log("Honor")
+    if (target.id != "interactions-btn") return;
 
     processInteraction(target);
   };
+}

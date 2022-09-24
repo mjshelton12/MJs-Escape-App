@@ -11,9 +11,14 @@ router.get('/', async (req, res) => {
     }
   });
   
-router.get('/:id', async (req, res) => {
+router.get('/:change', async (req, res) => {
+
+  const testNumber = req.params.change.slice(1)
+
+  console.log("LOOK A REQ! " + testNumber)
+
   try {
-    const inventoryData = await Inventory.findOne({where: {id :req.params.id}});
+    const inventoryData = await Inventory.findOne({where: {item_id : testNumber}});
 
     if (!inventoryData) {
       res.status(404).json({ message: 'No inventory found with that id' });
@@ -35,8 +40,6 @@ router.get('/:id', async (req, res) => {
 // });
 
 router.post('/', async (req, res) => {
-
-  console.log("HOLY SNAKES BATMAN! " + JSON.stringify(req.body))
 
   try {
     const inventoryData = await Inventory.create({

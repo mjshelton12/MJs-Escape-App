@@ -22,7 +22,7 @@ const interactionData = [
   {
     location_id: 1,
     interaction: "Try to Leave",
-    change: 0,
+    change: 2,
     change_destination: "win?"
   },
   {
