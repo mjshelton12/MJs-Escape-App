@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const session = require('express-session');
 const { Character, Location, Inventory } = require('../../models');
 // const withAuth = require('../../utils/auth');
 
@@ -24,6 +25,23 @@ router.get('/', async (req, res) => {
       res.status(200).json(characterData);
     } catch (err) {
       res.status(500).json(err);
+    }
+  });
+
+  router.post('/', async (req, res) => {
+
+    console.log("LOOK A USER " + req.session.id)
+    try {
+      const characterData = await Character.create({
+        user_id: req.session.user_id,
+        character_name: req.body,
+        stats: "cool",
+        location_id: 1
+      });
+      console.log("***LOOK HERE, A CHARACTER!" + characterData)
+      res.status(200).json(characterData);
+    } catch (err) {
+      res.status(400).json(err);
     }
   });
 
