@@ -1,15 +1,15 @@
-<div class="row app-land">
+<div class="row app-land2">
     <div>
-        <p>Welcome, {{character_name}}. You are in the {{location.location_name}}. What would you like to do next?</p>
+        <p class = "animate__animated animate__backInUp">Welcome, {{character_name}}. You are in the {{location.location_name}}. What would you like to do next?</p>
     </div>
-    <div>
+    <div class = "animate__animated animate__backInUp">
         <ul class="interaction-list" charID={{id}}>
             {{#each location.interactions as |interaction|}}
             {{> interaction}}
             {{/each}}
         </ul>
     </div>
-    <div>
+    <div class = "animate__animated animate__backInUp">
         <h4>Inventory:</h4>
         <ul>
             {{#each items as |item|}}
