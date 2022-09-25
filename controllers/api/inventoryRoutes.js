@@ -11,15 +11,11 @@ router.get('/', async (req, res) => {
     }
   });
   
-router.get('/:change', async (req, res) => {
-
-  const testNumber = req.params.change.slice(1)
-
-  console.log("LOOK A REQ! " + testNumber)
+router.get('/:charID', async (req, res) => {
 
   try {
-    const inventoryData = await Inventory.findOne({where: {item_id : testNumber}});
-
+    const inventoryData = await Inventory.findOne({where: {character_id : req.params.charID,
+                                                           item_id: 2}}); 
     if (!inventoryData) {
       res.status(404).json({ message: 'No inventory found with that id' });
       return;
@@ -30,13 +26,12 @@ router.get('/:change', async (req, res) => {
   }
 });
 
-router.post('/', async (req, res) => {
+router.post('/:charID', async (req, res) => {
 
   try {
     const inventoryData = await Inventory.create({
       item_id: req.body.change,
-      character_id: 1
-
+      character_id: req.params.charID
     });
     console.log(inventoryData)
     res.status(200).json(inventoryData);
