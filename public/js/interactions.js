@@ -21,7 +21,7 @@ const processInteraction = async (btnData) => {
   }
 
   if (changeClass === "item") {
-    const response = await fetch("/api/inventories", {
+    const response = await fetch(`/api/inventories/${charID}`, {
       method: "POST",
       body: JSON.stringify({ change }),
       headers: { "Content-Type": "application/json" },
@@ -35,7 +35,7 @@ const processInteraction = async (btnData) => {
   }
 
   if (changeClass === "win?") {
-    const response = await fetch(`/api/inventories/:${change}`, {
+    const response = await fetch(`/api/inventories/${charID}`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
