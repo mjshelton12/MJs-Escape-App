@@ -1,9 +1,10 @@
+const bcrypt = require('bcrypt')
 const { User } = require('../models');
 
 const userData = [
   {
     user_name: "RedRobin",
-    password: "password1234",
+    password: bcrypt.hashSync("password1234", 10),
   }
 ];
 

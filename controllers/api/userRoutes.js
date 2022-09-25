@@ -30,7 +30,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // CREATE new user
-router.post('/', async (req, res) => {
+router.post('/signup', async (req, res) => {
   try {
     console.log(req) 
     const dbUserData = await User.create({
@@ -41,7 +41,7 @@ router.post('/', async (req, res) => {
     // Set up sessions with a 'loggedIn' variable set to `true`
     req.session.save(() => {
       req.session.loggedIn = true;
-
+      req.session.userID=dbUserData.id
       res.status(200).json(dbUserData);
     });
   } catch (err) {
@@ -57,7 +57,8 @@ router.post('/login', async (req, res) => {
       where: { user_name : req.body.username }
     });
 
-    console.log(dbUserData)
+    //  console.log("DBUSER DATA" ,dbUserData)
+
 
     if (!dbUserData) {
       res
@@ -67,18 +68,20 @@ router.post('/login', async (req, res) => {
     }
 
     const validPassword = await dbUserData.checkPassword(req.body.password);
-
+    // console.log("validPassword" ,validPassword)
     if (!validPassword) {
       res
         .status(400)
         .json({ message: 'Incorrect email or password. Please try again!' });
+        console.log("here")
       return;
     }
+    // res.status(200).json(dbUserData)
 
     // Once the user successfully logs in, set up the sessions variable 'loggedIn'
     req.session.save(() => {
       req.session.loggedIn = true;
-
+      req.session.userID=dbUserData.id
       res
         .status(200)
         .json({ user: dbUserData, message: 'You are now logged in!' });
@@ -101,7 +104,9 @@ router.post('/logout', (req, res) => {
   }
 });
 
-module.exports = router;
+
+
+
 
 
 module.exports = router;

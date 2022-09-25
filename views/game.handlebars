@@ -3,7 +3,7 @@
         <p class = "animate__animated animate__backInUp">Welcome, {{character_name}}. You are in the {{location.location_name}}. What would you like to do next?</p>
     </div>
     <div class = "animate__animated animate__backInUp">
-        <ul class="interaction-list">
+        <ul class="interaction-list" charID={{id}}>
             {{#each location.interactions as |interaction|}}
             {{> interaction}}
             {{/each}}

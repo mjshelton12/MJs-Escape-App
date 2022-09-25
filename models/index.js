@@ -13,7 +13,10 @@ User.hasMany(Character, {
 Character.belongsTo(Location, {
   foreignKey: 'location_id'
 })
-
+Location.belongsTo(Character,{
+  through:  { model: 'character'}
+}
+  )
 Location.hasMany(Interaction, {
   foreignKey: 'location_id'
 })

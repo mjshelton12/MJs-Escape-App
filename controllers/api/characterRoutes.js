@@ -1,21 +1,45 @@
 const router = require('express').Router();
 const session = require('express-session');
-const { Character, Location, Inventory } = require('../../models');
+const { Character, Location, Interaction, Item } = require('../../models');
 // const withAuth = require('../../utils/auth');
 
 router.get('/', async (req, res) => {
     try {
-      const characterData = await Character.findAll({include: [Location,Inventory] });
+      const characterData = await Character.findAll({include: [
+        {
+          model: Location,
+          include: [
+            {
+              model: Interaction,
+            },
+          ],
+        },
+        {
+          model: Item,
+        },
+      ] });
       res.status(200).json(characterData);
     } catch (err) {
-      res.status(500).json(err);
-    }
+      res.status(500).json({message: err});
+    } 
   });
   
   router.get('/:id/', async (req, res) => {
     try {
       const characterData = await Character.findOne({where: {id :req.params.id},
-        include: [Location, Inventory]
+        include: [
+          {
+            model: Location,
+            include: [
+              {
+                model: Interaction,
+              },
+            ],
+          },
+          {
+            model: Item,
+          },
+        ]
       });
   
       if (!characterData) {
@@ -56,6 +80,7 @@ router.get('/', async (req, res) => {
     } else {
       res.status(404).json({message: 'Unable to update location'})
     }
-    })
+  })
 
+  
   module.exports = router;

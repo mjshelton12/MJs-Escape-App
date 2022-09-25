@@ -5,6 +5,7 @@ router.get('/', async (req, res) => {
     
         res.render('homepage', {
             loggedIn: req.session.loggedIn,
+            userID: req.session.userID
           });
         } catch (err) {
           console.log(err);
