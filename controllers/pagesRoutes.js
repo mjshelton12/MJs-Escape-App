@@ -2,10 +2,10 @@ const { Character, Location, Item, Interaction } = require("../models");
 
 const router = require("express").Router();
 
-router.get("/game", async (req, res) => {
+router.get("/game/:charid", async (req, res) => {
   try {
     const initializeCharacter = await Character.findOne({
-      where: (id = 1),
+      where: {id: req.params.charid},
       include: [
         {
           model: Location,
@@ -35,13 +35,25 @@ router.get("/game", async (req, res) => {
 
 router.get("/end", async (req, res) => {
   try {
-    const initializeCharacter = await Character.findOne({where: (id = 1)});
+    res.render("end");
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
-    const character = initializeCharacter.get({ plain: true });
-
-    res.render("end", {
-      ...character,
+router.get("/charSelect/:userid", async (req, res) => {
+  try {
+    const initializeCharacter = await Character.findAll(
+      {where: {user_id: req.params.userid},
+    raw:true});
+    // characters = initializeCharacter.get({plain:true})
+    // res.status(500).json(initializeCharacter)
+    res.render("charSelect", {
+        "characters":initializeCharacter,
+        "loggedIn": req.session.loggedIn
     });
+  // res.status(500).json(characters)
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

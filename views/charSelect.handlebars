@@ -1,0 +1,18 @@
+{{!-- Character Selector
+    Presents you with a list of characters that exist and that you can choose from
+    This is a list of character-buttons
+    Each character-button has an attribute with the correct character id
+    Each character-button has an event handler that on click triggers the returnCharacter function and render the game start page
+    Also it presents you with a button that lets you create a new character at the bottom of the list
+ --}}
+
+ <div class="row app-land">
+     <div>
+        <h3>CHOOSE YOUR CHARACTER:</h3>
+        <ul>
+            {{#each characters as |charButton|}}
+            {{> charButton}}
+            {{/each}}
+        </ul>
+     </div>
+ </div>

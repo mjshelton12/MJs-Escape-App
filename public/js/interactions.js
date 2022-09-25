@@ -3,10 +3,11 @@ const interactionList = document.querySelector(".interaction-list");
 const processInteraction = async (btnData) => {
 
   const change = btnData.getAttribute("change");
+  const charID = interactionList.getAttribute("charID")
   const changeClass = btnData.getAttribute("class");
 
   if (changeClass === "location") {
-    const response = await fetch("/api/characters/1", {
+    const response = await fetch(`/api/characters/${charID}`, {
       method: "PATCH",
       body: JSON.stringify({ location_id: change }),
       headers: { "Content-Type": "application/json" },
@@ -49,12 +50,17 @@ const processInteraction = async (btnData) => {
   }
 };
 
-if (interactionList) {
-  interactionList.onclick = function (event) {
+
+// console.log("hello")
+if(interactionList) {
+  interactionList.addEventListener("click", function (event) {
     let target = event.target;
-
     if (target.id != "interactions-btn") return;
-
+  
     processInteraction(target);
-  };
+  })
 }
+
+
+
+
