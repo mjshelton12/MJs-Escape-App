@@ -93,7 +93,7 @@ const interactionData = [
   },
   {
     location_id: 5,
-    interaction: "Pick up Shiney Key",
+    interaction: "Pick up Shiny Key",
     change: 14,
     change_destination: "item",
   },

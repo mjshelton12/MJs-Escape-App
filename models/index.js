@@ -10,9 +10,14 @@ User.hasMany(Character, {
   foreignKey: 'user_id'
 });
 
+Character.belongsTo(User, {
+  foreignKey: 'user_id'
+})
+
 Character.belongsTo(Location, {
   foreignKey: 'location_id'
 })
+
 Location.belongsTo(Character,{
   through:  { model: 'character'}
 }

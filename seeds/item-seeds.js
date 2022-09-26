@@ -14,7 +14,7 @@ var itemsList = ["Everything Bagel",
                 "Flashlight",
                 "Batteries",
                 "Snazzy Jacket",
-                "Shiney Key"];
+                "Shiny Key"];
 
 itemsList.forEach(function(entry) {
     var singleObj = {};

@@ -10,9 +10,10 @@
      <div>
         <h3>CHOOSE YOUR CHARACTER:</h3>
         <ul>
-            {{#each characters as |charButton|}}
+            {{#each charArray as |charButton|}}
             {{> charButton}}
             {{/each}}
         </ul>
+        <a href="/create/{{user_id}}"><button>Create New Character</button></a>
      </div>
  </div>
