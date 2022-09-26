@@ -1,25 +1,31 @@
+<div align="center">
+
 # Escape-App
+
+</div>
 
 <div id="top"></div>
 
-<!-- PROJECT LOGO -->
+
 <br />
 <div align="center">
   
-  ![Title]()
-
-  <h3 align="center"><a href="https://that-s-what-she-said.github.io/The-Scranton-Gamer/"></a></h3>
 
   
 </div>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+
+    Escape App is a text style game that is played within a browser page. The user navigates around a home using button prompts to find what item(s) they need to escape.
+
 <br>
+
+
 
 <div align="center">
 
-![landing]()
+![landing](./assets/landing.png)
 
     
 
@@ -31,12 +37,16 @@
 
 ### Built With
 
-<!-- This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples. -->
 
 * [HTML]
 * [CSS]
 * [JS]
-* 
+* [Node.js]
+* [Express]
+* [MySQL]
+* [Handlebars]
+* [Bcrypt]
+* [Animate.css]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -44,7 +54,7 @@
 
 <!-- GETTING STARTED -->
 
-## Members and Roles:
+## Members
 
 * Ryan Schubert
 * MJ Shelton
@@ -54,14 +64,14 @@
 <br>
 
 ## Project Name: 
-* Github Repo :  https://github.com/Eat-The-Bagel
-* Wireframe : https://whimsical.com/proj-2-choose-your-own-adventure-7FoC6ZSoVSHfCs2mj4w7xa
-* ERD
-* Presentation : 
+* [Github Repo](https://github.com/Eat-The-Bagel)
+* [Wireframe](https://whimsical.com/proj-2-choose-your-own-adventure-7FoC6ZSoVSHfCs2mj4w7xa)
+* [Member Agreement](https://docs.google.com/document/d/12b29oyukpLGLl2Rmx7p4xO4BmBqbYcyVtnf-yGQieec/edit?usp=sharing)
+* [Presentation](https://docs.google.com/presentation/d/1IqZ8o7U2gX-CDu6EpM1lkO7HVobiCxDOYlqr4cVfQ18/edit?usp=sharing)
+* [Escape App Website](https://eat-the-bagel.herokuapp.com/)
 <br>
 <br>
 
-## The Pitch:
 
 <div align="center">
 
@@ -71,40 +81,32 @@
 
 <br>
 
-## Commitments as a project team:
+## Team Rules:
 
-  * Keep other team members informed and transfer knowledge to others when applicable.
-  * Focus on what is best for the project as a whole.
-  * Give everyone the opportunity for equal participation (draw out introverts and balance extroverts).
-  * Be open to new approaches and listen to new ideas.
-  * Get input from the entire team before a decision is made. If this isn’t feasible, at least get input from key people.
-  * Attack problems or issues – not the person. When at a roadblock, console.log(math.random…)
+  * Support Each Other
+  * Communicate at all times
+  * Pitch idea before applying
+  * Celebrate the successes
+  * Laugh and have fun
+  * Learn from each other 
+  * Ask questions 
+  * Don’t say sorry. 
+  * Talk out all conflicts
+  * Best ⅔ vote
+  * Be honest
+
 
 <br>
 
-## Things to Consider (If time allows):
+## Future Development:
 
- * 
- * 
-
- <br>
-
-<!-- USAGE EXAMPLES -->
-## Usage
+ * Able to drop Inventory Items
+ * Leaderboard
+ * Unlocking new rooms using items in Inventory
+ * Combining items in inventory
+ * Adding Music
 
 
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Initialize readme
-- [x] Add Working Agreement
-- [x] Add Additional Templates w/ Examples
-- [x] Add "components" document to easily copy & paste sections of the readme
 
 
 
@@ -116,8 +118,8 @@
 
 Project Team: [https://github.com/Eat-The-Bagel](https://github.com/Eat-The-Bagel)
 
-* Ryan Schubert
-* MJ Shelton
+* Ryan Schubert - https://github.com/RyanSchu
+* MJ Shelton - https://github.com/mjshelton12 
 * Angel Escobar  - https://github.com/aescobar73 
 
 
@@ -129,12 +131,7 @@ Project Team: [https://github.com/Eat-The-Bagel](https://github.com/Eat-The-Bage
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* 
-* 
-* 
-* 
+* [NPM Animate](https://www.npmjs.com/package/animate.css)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
