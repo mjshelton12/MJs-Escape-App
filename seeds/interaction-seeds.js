@@ -126,7 +126,7 @@ const interactionData = [
   {
     location_id: 7,
     interaction: "Pick up Crowbar",
-    change: 8,
+    change: 9,
     change_destination: "item",
   },
   {
