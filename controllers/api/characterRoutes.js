@@ -52,18 +52,19 @@ router.get('/', async (req, res) => {
     }
   });
 
-  router.post('/', async (req, res) => {
+  router.post('/:id', async (req, res) => {
 
-    console.log("LOOK A USER " + req.session.id)
+    console.log("LOOK A USER " + req.params.id)
+    console.log("LOOK A BODY ", req.body.name)
     try {
       const characterData = await Character.create({
-        user_id: req.session.user_id,
-        character_name: req.body,
+        user_id: req.params.id,
+        character_name: req.body.name,
         stats: "cool",
         location_id: 1
       });
       console.log("***LOOK HERE, A CHARACTER!" + characterData)
-      res.status(200).json(characterData);
+      res.status(200).json("It worked!");
     } catch (err) {
       res.status(400).json(err);
     }
