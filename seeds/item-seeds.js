@@ -13,7 +13,8 @@ var itemsList = ["Everything Bagel",
                 "Floppy Disk",
                 "Flashlight",
                 "Batteries",
-                "Snazzy Jacket"];
+                "Snazzy Jacket",
+                "Shiney Key"];
 
 itemsList.forEach(function(entry) {
     var singleObj = {};
