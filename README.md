@@ -53,7 +53,7 @@
 
 <br>
 
-## Project Name: 
+## Live Links: 
 * Github Repo :  https://github.com/Eat-The-Bagel
 * Wireframe : https://whimsical.com/proj-2-choose-your-own-adventure-7FoC6ZSoVSHfCs2mj4w7xa
 * ERD
