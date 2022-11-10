@@ -17,7 +17,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-    Escape App is a text style game that is played within a browser page. The user navigates around a home using button prompts to find what item(s) they need to escape.
+Escape App is a text style game that is played within a browser page. The user navigates around a home using button prompts to find what item(s) they need to escape.
+
+This repository is a continued development by MJ Shelton. She chose to continue the project in order to further work on the app's functionality, user experience, and gameplay. None of the work seen here would have been posible without the hours of hard work put in by the original group memebers.
 
 <br>
 
@@ -56,19 +58,19 @@
 
 ## Members
 
-* Ryan Schubert
 * MJ Shelton
+* Ryan Schubert
 * Angel Escobar
 
 
 <br>
 
 ## Live Links: 
-* [Github Repo](https://github.com/Eat-The-Bagel)
-* [Wireframe](https://whimsical.com/proj-2-choose-your-own-adventure-7FoC6ZSoVSHfCs2mj4w7xa)
-* [Member Agreement](https://docs.google.com/document/d/12b29oyukpLGLl2Rmx7p4xO4BmBqbYcyVtnf-yGQieec/edit?usp=sharing)
-* [Presentation](https://docs.google.com/presentation/d/1IqZ8o7U2gX-CDu6EpM1lkO7HVobiCxDOYlqr4cVfQ18/edit?usp=sharing)
 * [Escape App Website](https://eat-the-bagel.herokuapp.com/)
+* [Github Repo](https://github.com/mjshelton12/MJs-Escape-App)
+* [Wireframe](https://whimsical.com/proj-2-choose-your-own-adventure-7FoC6ZSoVSHfCs2mj4w7xa)
+* [Presentation](https://docs.google.com/presentation/d/1IqZ8o7U2gX-CDu6EpM1lkO7HVobiCxDOYlqr4cVfQ18/edit?usp=sharing)
+
 <br>
 <br>
 
@@ -81,23 +83,6 @@
 
 <br>
 
-## Team Rules:
-
-  * Support Each Other
-  * Communicate at all times
-  * Pitch idea before applying
-  * Celebrate the successes
-  * Laugh and have fun
-  * Learn from each other 
-  * Ask questions 
-  * Don’t say sorry. 
-  * Talk out all conflicts
-  * Best ⅔ vote
-  * Be honest
-
-
-<br>
-
 ## Future Development:
 
  * Able to drop Inventory Items
@@ -105,9 +90,6 @@
  * Unlocking new rooms using items in Inventory
  * Combining items in inventory
  * Adding Music
-
-
-
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -118,8 +100,8 @@
 
 Project Team: [https://github.com/Eat-The-Bagel](https://github.com/Eat-The-Bagel)
 
-* Ryan Schubert - https://github.com/RyanSchu
 * MJ Shelton - https://github.com/mjshelton12 
+* Ryan Schubert - https://github.com/RyanSchu
 * Angel Escobar  - https://github.com/aescobar73 
 
 
