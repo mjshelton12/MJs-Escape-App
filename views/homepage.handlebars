@@ -17,6 +17,10 @@
         {{#if loggedIn}}
         <a href="/char/{{userID}}"><button>Use Previous Character</button></a>
         <a href="/create/{{userID}}"><button>New Character</button></a>
+        {{else}}
+        <!-- Otherwise, show a link to login -->
+        <a href="/login">Login</a>
         {{/if}}
+
 </div>
 
