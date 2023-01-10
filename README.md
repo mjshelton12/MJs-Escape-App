@@ -66,7 +66,7 @@ This repository is a continued development by MJ Shelton. She chose to continue 
 <br>
 
 ## Live Links: 
-* [Escape App Website](https://eat-the-bagel.herokuapp.com/)
+* [Escape App Website](https://mjs-escape-app.herokuapp.com/)
 * [Github Repo](https://github.com/mjshelton12/MJs-Escape-App)
 * [Wireframe](https://whimsical.com/proj-2-choose-your-own-adventure-7FoC6ZSoVSHfCs2mj4w7xa)
 * [Presentation](https://docs.google.com/presentation/d/1IqZ8o7U2gX-CDu6EpM1lkO7HVobiCxDOYlqr4cVfQ18/edit?usp=sharing)
