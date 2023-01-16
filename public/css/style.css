@@ -99,3 +99,22 @@ button {
 
   background-color: limegreen;
 }
+
+@media (max-width:750px) {
+  .gallery {
+    padding: 0px;
+  }
+
+  .app-land {
+    text-align: center;
+    width: 75%;
+  }
+
+  .app-land2 {
+    text-align: center;
+    justify-content: center;
+    padding: 25px;
+    width: 75%;
+  }
+
+}
