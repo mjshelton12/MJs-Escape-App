@@ -99,9 +99,13 @@ button {
   background-color: limegreen;
 }
 
-game-el {
-  width: 100%;
+.game-el {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
 }
+
 
 @media (max-width:750px) {
   .gallery {
@@ -118,6 +122,10 @@ game-el {
     justify-content: center;
     padding: 25px;
     width: 75%;
+  }
+
+  .game-el {
+    flex-direction: column;
   }
 
 }

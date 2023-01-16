@@ -4,15 +4,15 @@
         <br></br>
         Find the right item and it will let you leave.
     </div>
-    <div>
-        <div class = "animate__animated animate__backInUp game-el">
+    <div class="game-el">
+        <div class = "animate__animated animate__backInUp">
             <ul class="interaction-list" charID={{id}}>
                 {{#each location.interactions as |interaction|}}
                 {{> interaction}}
                 {{/each}}
             </ul>
         </div>
-            <div class = "animate__animated animate__backInUp game-el">
+            <div class = "animate__animated animate__backInUp">
             <h4>Inventory:</h4>
             <ul>
                 {{#each items as |item|}}
