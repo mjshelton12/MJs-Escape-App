@@ -96,8 +96,11 @@ nav a {
 }
 
 button {
-
   background-color: limegreen;
+}
+
+game-el {
+  width: 100%;
 }
 
 @media (max-width:750px) {
